@@ -5,14 +5,14 @@ programing as well as basic algorithms. The project requires that we (the
 students) create a C library which doesn't rely on third party libraries to do
 the following things:
 
-| Task                                  | filename    | Level    |
-| :------------------------------------ | :---------- | :------- |
-| Spot characters in a string           | `TODO`      | Easy     |
-| Identify words which are palindromes  | `TODO`      | Easy     |
-| Calculate sines (using series)        | `TODO`      | Medium   |
-| Calculate cosines (using series)      | `TODO`      | Medium   |
-| Matrix addition                       | `TODO`      | Hard*    |
-| Matrix multiplication                 | `TODO`      | Hard*    |
+| Task                                  | filename           | Level    |
+| :------------------------------------ | :----------------- | :------- |
+| Spot characters in a string           | `findChar.h`       | Easy     |
+| Identify words which are palindromes  | `findPalindrome.h` | Easy     |
+| Calculate sines (using series)        | `sine.h`           | Medium   |
+| Calculate cosines (using series)      | `cosine.h`         | Medium   |
+| Matrix addition                       | `TODO`             | Hard*    |
+| Matrix multiplication                 | `TODO`             | Hard*    |
 
 *This is the first programing APP. The word Hard is used very liberaly here.
 

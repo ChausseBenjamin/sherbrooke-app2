@@ -17,7 +17,7 @@
 //   - Trailing spaces         -> sis, heightened, minim
 //   - Spaces before the words -> sis, unholly, pop
 //   - Non latin alphabet (greek & russian)
-char *word[] = {
+char *wrd[] = {
   "abba", "betrothed", "deified", "elevation", "genesis", "kayak", "murdum",
   " pop", "relinquish", "stats", "thirst", "abhorrent", "accentuated",
   "agoraphobia", " aibohphobia", "anemia", "bIb", "bittersweet", "bob",
