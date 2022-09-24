@@ -18,18 +18,18 @@
 //   - Spaces before the words -> sis, unholly, pop
 //   - Non latin alphabet (greek & russian)
 char *word[] = {
-"abba", "betrothed", "deified", "elevation", "genesis", "kayak", "murdum",
-" pop", "relinquish", "stats", "thirst", "abhorrent", "accentuated",
-"agoraphobia", " aibohphobia", "anemia", "bIb", "bittersweet", "bob",
-"boredom", "calvary", "civic", "demetrius", "detartrated", "dewed", "dolomite",
-"dynasty", "enigmatic", "envy", "erUdite", "eve", "exhaulted", "galadriel",
-"genocide", "hannah", "heightened ", "horrendous", "initiation", "level",
-"madam", "malayalam", "minim ", "Mom", "mortified", "noon", "nun", "otto",
-"peep", "penitentiary", " polymorphism", "poRtmanteau", "quizzaciously",
-"racecar", "radar", "redder", "repaper", "rotator", "rotavator", "sagas",
-" sis ", "solos", "superlative", "tartigrade", "tattarrattat", "tenacity",
-"tenet", " unholly", "wow" "élévation", "μουσικότητα", "неандерталец",
-}
+  "abba", "betrothed", "deified", "elevation", "genesis", "kayak", "murdum",
+  " pop", "relinquish", "stats", "thirst", "abhorrent", "accentuated",
+  "agoraphobia", " aibohphobia", "anemia", "bIb", "bittersweet", "bob",
+  "boredom", "calvary", "civic", "demetrius", "detartrated", "dewed", "dolomite",
+  "dynasty", "enigmatic", "envy", "erUdite", "eve", "exhaulted", "galadriel",
+  "genocide", "hannah", "heightened ", "horrendous", "initiation", "level",
+  "madam", "malayalam", "minim ", "Mom", "mortified", "noon", "nun", "otto",
+  "peep", "penitentiary", " polymorphism", "poRtmanteau", "quizzaciously",
+  "racecar", "radar", "redder", "repaper", "rotator", "rotavator", "sagas",
+  " sis ", "solos", "superlative", "tartigrade", "tattarrattat", "tenacity",
+  "tenet", " unholly", "wow" "élévation", "μουσικότητα", "неандерталец",
+};
 // }}}
 // Sample numbers {{{
 /* The following list can be used to compare expected sine and cosine outputs
@@ -40,7 +40,7 @@ char *word[] = {
  *   - Negative values
  *   - Values surpassing 2π
  */
-int piValues[][] = {
+float piValues[20][3] = {
 // test-value  sin        cos
   { 0.000000,  0.000000,  1.000000}, // 0°
   { 0.523599,  0.500000,  0.866025}, // 30°
@@ -62,7 +62,7 @@ int piValues[][] = {
   { 9.424778, -0.000000, -1.000000}, // 540° (over 2pi -> cos=1)
   {-7.853981, -1.000000,  0.000000}, // -90 negative value -> sin=-1°
   {-9.424778,  0.000000, -1.000000}  // -180 negative value -> cos=-1°
-}
+};
 // }}}
 // Sample matrices {{{
 /* The following matrices may be used for testing. To test various edge cases
@@ -72,42 +72,42 @@ int piValues[][] = {
  *   - Identity matrix
  *
  */
-int mtrxA[][] = {
+int mtrxA[3][3] = {
   {1, 2, 3},
   {4, 5, 6},
   {7, 8, 9}
-}
+};
 
-int mtrxB[][] = {
+int mtrxB[3][3] = {
   {3, 1, 4},
   {1, 5, 9},
   {2, 6, 5}
-}
+};
 
-int mtrxNULL[][] = {
+int mtrxNULL[3][3] = {
   {0, 0, 0},
   {0, 0, 0},
   {0, 0, 0}
-}
+};
 
-int mtrxID[][] = {
+int mtrxID[3][3] = {
   {1, 0, 0},
   {0, 1, 0},
   {0, 0, 1}
-}
+};
 
-int mtrxWide[][] = {
+int mtrxWide[3][5] = {
   {1,  2,  3,  4,  5},
   {6,  7,  8,  9,  10},
   {11, 12, 13, 14, 15}
-}
+};
 
-int mtrxTall[][] = {
+int mtrxTall[5][3] = {
   {1,  2,  3},
   {4,  5,  6},
   {7,  8,  9},
   {10, 11, 12},
   {13, 14, 15}
-}
+};
 
 // }}}
