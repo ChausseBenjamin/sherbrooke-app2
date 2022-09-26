@@ -20,6 +20,23 @@ const char caps[2][26] = {
     'n','o','p','q','r','s','t','u','v','w','x','y','z'}
 };
 
+int pow(int b, int e){
+  int result =1;
+  for (int i = 0; i<e; i++){
+    result *= b;
+  }
+  return result;
+}
+
+float avg(float arr[]){
+  int len = COUNT_OF(arr);
+  float sum = 0;
+  for (int i=0;i<len;i++){
+    sum += arr[i];
+  }
+  return sum/len;
+}
+
 // Convert every character to lowercase
 char * lower(char *str){
   int len = COUNT_OF(str);
