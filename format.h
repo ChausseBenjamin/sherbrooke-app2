@@ -31,17 +31,8 @@ double pow(double b, int e){
   }
 }
 
-double avg(double arr[]){
-  int len = COUNT_OF(arr);
-  double sum = 0;
-  for (int i=0;i<len;i++){
-    sum += arr[i];
-  }
-  return sum/len;
-}
-
 // Convert every character to lowercase
-char * lower(char *str){
+const char* lower(char *str){
   int len = COUNT_OF(str);
   for (int i=0; i<len; i++){
     // Change all letters to lowercase
@@ -55,7 +46,7 @@ char * lower(char *str){
 }
 
 // Count the total number of spaces to define the new str size
-char * trim(char *str){
+const char* trim(char *str){
   int spc =0;
   for (int i=0; i<COUNT_OF(str); i++){
     if (str[i] == ' '){
@@ -63,7 +54,7 @@ char * trim(char *str){
     }
   }
   // Actually format the new string
-  char nstr[COUNT_OF(str)-spc+1];
+  char *nstr = "";
   int j = 0; // index inside the new str (nstr)
   for (int i=0; i<COUNT_OF(str); i++){
     if (str[i] != ' '){

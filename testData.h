@@ -17,7 +17,7 @@
 //   - Trailing spaces         -> sis, heightened, minim
 //   - Spaces before the words -> sis, unholly, pop
 //   - Non latin alphabet (greek & russian)
-const char *wrd[] = {
+const char* wrd[] = {
   "abba", "betrothed", "deified", "elevation", "genesis", "kayak", "murdum",
   " pop", "relinquish", "stats", "thirst", "abhorrent", "accentuated",
   "agoraphobia", " aibohphobia", "anemia", "bIb", "bittersweet", "bob",
@@ -28,7 +28,7 @@ const char *wrd[] = {
   "peep", "penitentiary", " polymorphism", "poRtmanteau", "quizzaciously",
   "racecar", "radar", "redder", "repaper", "rotator", "rotavator", "sagas",
   " sis ", "solos", "superlative", "tartigrade", "tattarrattat", "tenacity",
-  "tenet", " unholly", "wow" "élévation", "μουσικότητα", "неандерталец",
+  "tenet", " unholly", "wow", "élévation"
 };
 // }}}
 // Sample numbers {{{
