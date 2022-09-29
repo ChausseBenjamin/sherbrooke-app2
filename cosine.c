@@ -11,10 +11,10 @@
 #include "format.h"
 #include "testData.h"
 
-float cos(float input, int precision){
-  float ttl = 1;
+double cos(double input, int precision){
+  double ttl = 1;
   int denom = 1;
-  float num;
+  double num;
   for (int i=2;i<=(2*precision);i+=2){
     num = mpow(input,i);
     denom *= i*(i-1);
@@ -25,8 +25,8 @@ float cos(float input, int precision){
 }
 
 int main(){
-  const int precision = 16;
-  const float threshold = 1e-4;
+  const int precision = 20;
+  const double threshold = 1e-4;
 
   for (int i=0; i<COUNT_OF(piValues);i++){
     if ( abs(piValues[i][2]-cos(piValues[i][0],precision))>threshold ){

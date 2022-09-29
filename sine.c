@@ -14,10 +14,10 @@
 
 const int DEBUG = TRUE;
 
-float sin(float input, int precision){
-  float ttl = input;
+double sin(double input, int precision){
+  double ttl = input;
   int denom = 1;
-  float num;
+  double num;
   for (int i=3;i<(2*precision)+2;i+=2) {
     num = mpow(input,i);
     denom *= i*(i-1);
@@ -27,8 +27,8 @@ float sin(float input, int precision){
 }
 
 int main(){
-  const int precision = 16;
-  const float threshold = 1e-4;
+  const int precision = 20;
+  const double threshold = 1e-4;
 
   for (int i=0; i<COUNT_OF(piValues);i++){
     if ( abs(piValues[i][1]-sin(piValues[i][0],precision))>threshold ){

@@ -40,7 +40,7 @@ const char *wrd[] = {
  *   - Negative values
  *   - Values surpassing 2π
  */
-const float piValues[20][3] = {
+const double piValues[20][3] = {
 // test-value  sin        cos
   { 0.000000,  0.000000,  1.000000}, // 0°
   { 0.523599,  0.500000,  0.866025}, // 30°

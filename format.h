@@ -21,7 +21,7 @@ const char caps[2][26] = {
     'n','o','p','q','r','s','t','u','v','w','x','y','z'}
 };
 
-float mpow(float b, int e){
+double mpow(double b, int e){
   if (e==1){
     return b;
   } else if (e%2==0){
@@ -31,9 +31,9 @@ float mpow(float b, int e){
   }
 }
 
-float avg(float arr[]){
+double avg(double arr[]){
   int len = COUNT_OF(arr);
-  float sum = 0;
+  double sum = 0;
   for (int i=0;i<len;i++){
     sum += arr[i];
   }
@@ -75,6 +75,6 @@ char * trim(char *str){
   return nstr;
 }
 
-float abs(float i){
+double abs(double i){
   return (i>0) ? i : -i;
 }
