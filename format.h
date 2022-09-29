@@ -21,13 +21,13 @@ const char caps[2][26] = {
     'n','o','p','q','r','s','t','u','v','w','x','y','z'}
 };
 
-double mpow(double b, int e){
+double pow(double b, int e){
   if (e==1){
     return b;
   } else if (e%2==0){
-    return mpow(b*b,e/2);
+    return pow(b*b,e/2);
   } else {
-    return b * mpow(b*b, e/2);
+    return b * pow(b*b, e/2);
   }
 }
 

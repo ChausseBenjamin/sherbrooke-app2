@@ -12,14 +12,14 @@
 #include "format.h"
 #include "testData.h"
 
-const int DEBUG = TRUE;
+const int DEBUG = FALSE;
 
 double sin(double input, int precision){
   double ttl = input;
   int denom = 1;
   double num;
   for (int i=3;i<(2*precision)+2;i+=2) {
-    num = mpow(input,i);
+    num = pow(input,i);
     denom *= i*(i-1);
     ttl += ((i-1)/2 %2 == 1) ? -num/denom : num/denom;
   }
@@ -42,9 +42,11 @@ int main(){
              sin(piValues[i][0],precision));
       return 1;
     } else {
-      printf("%f IS ALL GOOD!\n",piValues[i][0]);
+      if (DEBUG){
+        printf("%f IS ALL GOOD!\n",piValues[i][0]);
+      }
     }
   }
-
+  printf("All checks have passed!\n");
   return 0;
 }
