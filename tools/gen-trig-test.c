@@ -11,25 +11,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* This code was used to generate floating numbers found in testData.h
- * It's purpose is to generate a list of expected outputs for the sine
- * and cosine function with a given number. It uses the math.h library
+/* This code was used to generate double precision floating point numbers found
+ * in testData.h It's purpose is to generate a list of expected outputs for the
+ * sine and cosine function with a given number. It uses the math.h library
  * which cannot be used for the assignment and which is therefore a great
  * subject to test and compare with.
  *
- * The generated [][3]int list is organized as follows:
- * { original_value, expected_sine, expected_cosine }
+ * The generated [][3]int list is organized as follows: { original_value,
+ * expected_sine, expected_cosine }
  *
- * Values chosen here test the following edge cases,
- *   - Common trigonometric circle identities (0°,30°,45°,60°,90°, etc...)
- *   - Negative values
- *   - Values surpassing 2π
+ * Values chosen here test the following edge cases, - Common trigonometric
+ * circle identities (0°,30°,45°,60°,90°, etc...) - Negative values - Values
+ * surpassing 2π
  */
 
 int main(){
 
   // list of number {{{
-  float lst[20] = {
+  double lst[20] = {
     0,         // 0°
     M_PI/6,    // 30°
     M_PI/4,    // 45°
@@ -56,17 +55,16 @@ int main(){
 
   printf("int piValues[][] = {\n");
   int max = (sizeof(lst)/sizeof(lst[0]))-1;
-  printf("%d",max);
   for (int i=0; i<max; i++) {
     printf("  {%f, %f, %f},\n",
         lst[i],
         sin(lst[i]),
         cos(lst[i]));
   };
-  printf("  {%f, %f, %f}\n}",
+  printf("  {%f, %f, %f}\n}\n",
       lst[max],
       sin(lst[max]),
       cos(lst[max]));
 
-  return 0
+  return 0;
 }

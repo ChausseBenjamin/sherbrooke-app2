@@ -10,6 +10,7 @@
 
 #define TRUE 1
 #define FALSE 0
+
 #define COUNT_OF( arr) (sizeof(arr)/sizeof(0[arr]))
 
 // Conversion table between uppercase and lowercase
@@ -20,12 +21,14 @@ const char caps[2][26] = {
     'n','o','p','q','r','s','t','u','v','w','x','y','z'}
 };
 
-int pow(int b, int e){
-  int result =1;
-  for (int i = 0; i<e; i++){
-    result *= b;
+float mpow(float b, int e){
+  if (e==1){
+    return b;
+  } else if (e%2==0){
+    return mpow(b*b,e/2);
+  } else {
+    return b * mpow(b*b, e/2);
   }
-  return result;
 }
 
 float avg(float arr[]){
@@ -51,8 +54,8 @@ char * lower(char *str){
   return str;
 }
 
+// Count the total number of spaces to define the new str size
 char * trim(char *str){
-  // Count the total number of spaces to define the new str size
   int spc =0;
   for (int i=0; i<COUNT_OF(str); i++){
     if (str[i] == ' '){
@@ -70,4 +73,8 @@ char * trim(char *str){
   }
   nstr[COUNT_OF(nstr)-1] = '\0';
   return nstr;
+}
+
+float abs(float i){
+  return (i>0) ? i : -i;
 }

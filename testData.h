@@ -17,7 +17,7 @@
 //   - Trailing spaces         -> sis, heightened, minim
 //   - Spaces before the words -> sis, unholly, pop
 //   - Non latin alphabet (greek & russian)
-char *wrd[] = {
+const char *wrd[] = {
   "abba", "betrothed", "deified", "elevation", "genesis", "kayak", "murdum",
   " pop", "relinquish", "stats", "thirst", "abhorrent", "accentuated",
   "agoraphobia", " aibohphobia", "anemia", "bIb", "bittersweet", "bob",
@@ -40,7 +40,7 @@ char *wrd[] = {
  *   - Negative values
  *   - Values surpassing 2π
  */
-float piValues[20][3] = {
+const float piValues[20][3] = {
 // test-value  sin        cos
   { 0.000000,  0.000000,  1.000000}, // 0°
   { 0.523599,  0.500000,  0.866025}, // 30°
@@ -72,37 +72,37 @@ float piValues[20][3] = {
  *   - Identity matrix
  *
  */
-int mtrxA[3][3] = {
+const int mtrxA[3][3] = {
   {1, 2, 3},
   {4, 5, 6},
   {7, 8, 9}
 };
 
-int mtrxB[3][3] = {
+const int mtrxB[3][3] = {
   {3, 1, 4},
   {1, 5, 9},
   {2, 6, 5}
 };
 
-int mtrxNULL[3][3] = {
+const int mtrxNULL[3][3] = {
   {0, 0, 0},
   {0, 0, 0},
   {0, 0, 0}
 };
 
-int mtrxID[3][3] = {
+const int mtrxID[3][3] = {
   {1, 0, 0},
   {0, 1, 0},
   {0, 0, 1}
 };
 
-int mtrxWide[3][5] = {
+const int mtrxWide[3][5] = {
   {1,  2,  3,  4,  5},
   {6,  7,  8,  9,  10},
   {11, 12, 13, 14, 15}
 };
 
-int mtrxTall[5][3] = {
+const int mtrxTall[5][3] = {
   {1,  2,  3},
   {4,  5,  6},
   {7,  8,  9},
