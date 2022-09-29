@@ -7,6 +7,7 @@
  * Benjamin Chausse
  * ----------------------------------------------------------------------------
  */
+
 #include <stdio.h>
 #include "format.h"
 #include "testData.h"
