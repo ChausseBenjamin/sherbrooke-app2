@@ -26,7 +26,7 @@ double cos(double input, int precision){
 
 int main(){
   const int precision = 20;
-  const double threshold = 1e-4;
+  const double threshold = 1e-9;
 
   for (int i=0; i<COUNT_OF(piValues);i++){
     if ( abs(piValues[i][2]-cos(piValues[i][0],precision))>threshold ){
